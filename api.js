@@ -33,6 +33,8 @@ export const searchImage = (query) => {
                         images: raw.collection.items,
                         ...raw.collection.metadata,
                     }
+                    console.log("a")
+                    console.log(res)
                     resolve(res)
                     // resolve(temp)
                 } catch (err) {
@@ -68,8 +70,7 @@ export const getImageVersions = (href) => {
 
 const test = async () => {
     let res = await searchImage({q:"mars"})
-    console.log(res)
 
     // console.log(await getImageVersions(res.images[0].href))
 }
-test()
+// test()

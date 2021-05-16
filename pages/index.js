@@ -38,9 +38,15 @@ export default function Home() {
             onChange={
               (element) =>{
                 const {value} = element.currentTarget
-                console.log(value)
                 setSearchTerms(value)
               } 
+            }
+            onKeyPress={
+              (event) => {
+                // submits search on enter
+                if (event.code === 'Enter')
+                  return submitSearch()
+              }
             }
           />
           <Image
