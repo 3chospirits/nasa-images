@@ -1,3 +1,5 @@
-export default function ImagePreview() {
-    
+export default function ImagePreview(props) {
+    const {data, href, links} = props
+    console.log(props)
+    return 
 }
